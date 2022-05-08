@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+:root {
+  --clr-background: #202c37;
+  --clr-text: #fff;
+  --clr-element: #2b3945;
+  --clr-input-text: #fff;
+
+  --ff: "Nunito Sans", sans-serif;
+  --fw-light: 300;
+  --fw-bold: 600;
+  --fw-extra-bold: 800;
+}
+
+* {
+  font-family: var(--ff);
+  font-weight: var(--fw-light);
+  background-color: var(--clr-background);
+  color: var(--clr-text);
+  margin: 0;
+  padding: 0;
+  font-weight: var(--fw-light);
+  font-size: 0.875rem;
+}
+
+img {
+  width: 100%;
+}
+
+.app-header {
+  background-color: var(--clr-element);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  padding: 1rem;
+}
+
+.app-loading {
+  text-align: center;
+}
+
+.app-header__title {
+  background-color: var(--clr-element);
+  font-weight: var(--fw-extra-bold);
+  letter-spacing: 1px;
+}
+
+.app-header__change-mod {
+  background-color: var(--clr-element);
+  cursor: pointer;
+}
+.app-header__change-icon {
+  margin-right: 0.5rem;
+}
+
+.app-country-list {
+  padding: 1rem 3rem;
+}
+
+.app-country,
+.app-country__name,
+.app-country__title,
+.app-country__text,
+.app-country__flag,
+.app-country__description {
+  background-color: var(--clr-element);
+}
+
+.app-country,
+.app-search__container,
+.app-search {
+  width: 88%;
+  max-width: 400px;
+}
+
+.app-country {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.app-country__flag {
+  order: -1;
+}
+
+.app-country__description {
+  padding: 1rem 2rem;
+  line-height: 1.5rem;
+}
+
+.app-country__text > strong {
+  font-weight: var(--fw-bold);
+  background-color: var(--clr-element);
+}
+
+.app-country__name {
+  font-weight: var(--fw-extra-bold);
+  margin-bottom: 1rem;
+}
+
+.app-search__container {
+  padding: 1rem;
+  position: relative;
+}
+
+.app-search {
+  display: block;
+  padding: 1rem 1rem 1rem 3rem;
+  background-color: var(--clr-element);
+  border: none;
+  border-radius: 8px;
+  color: var(--clr-input-text);
+}
+
+.app-search__icon {
+  position: absolute;
+  top: 2.2rem;
+  left: 2rem;
+  color: var(--clr-input-text);
+}
+
+.app-search:focus {
+  width: 100%;
+  background-color: var(--clr-element);
+}
+
+.app-search__select {
+  display: block;
+  margin: 2rem 0;
+  padding: 1rem 5rem 1rem 2rem;
+  background-color: var(--clr-element);
+  border: none;
+  border-radius: 8px;
+}
+
+.app-country__buttons {
+  background-color: var(--clr-element);
+  padding: 0 2rem 3rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background-color: var(--clr-element);
+  margin-top: 1rem;
+}
+
+.btn {
+  background-color: var(--clr-element);
+  border: 1px solid var(--clr-background);
+  padding: 0.5em 1em;
+  margin-right: 0.5em;
+}
+
+.big {
+  font-size: 1.3rem;
+  background-color: var(--clr-element);
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.back {
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+  margin-left: 2rem;
+}
+.arrow {
+  background-color: var(--clr-element);
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 600px) {
+  .app-header {
+    padding: 2rem 5rem;
+  }
+
+  .app-country-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .app-country {
+    width: 20%;
+    min-width: 300px;
+    height: 330px;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    justify-self: center;
+  }
+
+  .app-country:last-child {
+    margin-right: 0;
+  }
+
+  .app-search__container {
+    padding: 2rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .app-search__icon {
+    left: 6rem;
+    top: 3.2rem;
+  }
+
+  .app-search {
+    display: block;
+  }
+
+  .app-search__select {
+    display: block;
+  }
+  .back {
+    display: block;
+    width: 75px;
+    text-align: center;
+    margin-left: 5rem;
+    margin-top: 3rem;
+  }
+
+  .detail {
+    background-color: var(--clr-background);
+    display: grid;
+    margin-left: 5rem;
+    grid-template-columns: 200px 200px 250px 250px;
+    grid-template-areas:
+      "flag flag desc ."
+      "flag flag desc desc2"
+      "flag flag buttons buttons";
+  }
+
+  .two {
+    grid-area: desc2;
+  }
+
+  .app-country__flag {
+    grid-area: flag;
+  }
+
+  .one {
+    grid-area: desc;
+  }
+
+  .app-country__buttons {
+    background-color: var(--clr-background);
+    grid-area: buttons;
+    display: flex;
+    align-items: baseline;
+  }
+
+  .app-country__buttons,
+  .one,
+  .two,
+  .big {
+    background-color: var(--clr-background);
+  }
+}
